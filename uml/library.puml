@@ -1,0 +1,58 @@
+@startuml
+
+class Library {
+    - String: name;
+    - books: Book[];
+
+    + rent(item, Member) : bool
+    + return(item) :
+    + main()
+
+}
+
+abstract class Item {
+    - String: id;
+    - Member: rentedBy;
+}
+
+class Member {
+    - String name;
+    - int: memberNumber;
+    - Date: birthday;
+}
+
+class Date {
+    - int: day;
+    - int: month;
+    - int: year;
+}
+
+class Author {
+    - String: name;
+    - Date: birthday;
+
+}
+
+class Movie {
+    - String: title;
+}
+
+abstract class Book {
+    # String: title;
+    # String: isbn;
+    # Author: author; '#' symbolized 'protected'
+}
+class AudioBook {
+    - int: pages;
+}
+class PaperBook {
+    - int: length;
+}
+
+
+AudioBook --|> Book
+PaperBook --|> Book
+Book --|> Item
+Movie --|> Item
+
+@enduml
