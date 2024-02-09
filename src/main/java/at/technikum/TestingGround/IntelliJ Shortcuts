@@ -2,6 +2,10 @@
 ALT + UP/DOWN
     moving to the next/previous method
 
+
+CTRL + ALT + L
+    formatting code
+
 ALT + INSERT
     executed in:
        - file:
